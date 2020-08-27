@@ -1,0 +1,41 @@
+.main-contents
+  .post-list
+    - (1..10).each do |i|
+      .post-list__posts
+        .post-list__upperContents
+          .post-list__userContents
+            .post-list__userIcon image
+            .post-list__userName michael
+          .post-list__postDetail
+            .post-list__postDate 5hours ago
+        .post-list__bottomContents
+          .post-list__leftContents
+            .post-list__albumImage image
+          .post-list__rightContents
+            .post-list__musicTitle kill this love
+            .post-list__artistName blackpink
+            .post-list__comment サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        .action-menu
+        .ike   
+        .comment
+
+  %footer
+    = form_with html: {class: "Form"}, local: true do |f|
+      .form__imageForm
+        = f.label :image, class: 'form__image' do
+          = icon('far', 'image', class: 'form__image')
+          = f.file_field :image, class: 'form__selectFile'    
+      .form__contents
+        = f.text_field :body, class: 'form__textForm', placeholder: 'music-name'
+        = f.text_field :body, class: 'form__textForm', placeholder: 'artist'
+        = f.text_area :body, class: 'form__commentForm', placeholder: 'comment'
+      = f.submit 'Send', class: 'form__submit'
+
+-# .contents.row
+-#   - @posts.each do |post|
+-#     .music-list
+-#       %p= post.username
+-#       %p= post.title
+-#       %p= post.artist
+-#       %p= post.comment
+-#       = post.created_at.strftime("%Y/%m/%d")

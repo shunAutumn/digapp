@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Digapp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:href => "https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100&family=VT323&display=swap", :rel => "stylesheet"}/
+    
+  %body{:id => "#{controller.controller_name}-#{controller.action_name}"}
+    = render 'shared/header'
+    = yield
+    = render 'shared/footer'
