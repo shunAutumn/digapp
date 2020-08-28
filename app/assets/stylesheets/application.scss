@@ -1,5 +1,138 @@
 @import "reset";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "modules/welcome"
+@import "modules/welcome";
+@import "modules/posts";
+@import "modules/users";
+@import "modules/profiles";
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1080px;
+  margin: 0 auto;
+  // font-family: 'VT323', monospace;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background-color: gray;
+  .logo {
+    margin-left: 45px;
+    background-color: gray;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+        a {
+        display: block;
+        width: 100px;
+        padding: 3px;
+        margin: 10px 0px 10px 0px;
+        text-decoration: none;
+        border:outset 3px #C2CBBD;
+        background-color: #C2CBBD;
+        text-align: center;
+        color: #000000;
+        font-size: 14px;
+      }
+  }
+  ul{
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+    display: flex;
+  }
+  li{ 
+    display: inline; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+  }
+  li a{
+    display: block;
+    width: 100px;
+    padding: 3px;
+    margin: 10px 0px 10px 0px;
+    text-decoration: none;
+    border:outset 3px #C2CBBD;
+    background-color: #C2CBBD;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+  }
+  li a:hover{
+    border: inset 3px #95A38D;
+    background-color: #95A38D;
+  }
+}
+
+#footer {
+  .foot-wrap .menu-left, .menu-center, .menu-right {
+    display: inline-block;
+    width: 20%;
+  }
+  .foot-wrap ul {
+    list-style: none;
+    padding: 0;
+    line-height:40px;
+  }
+  
+  .foot-wrap {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .foot-wrap h3 {
+    border-bottom: 3px solid #2ac5b3;
+    padding: 10px;
+  }
+  
+  .foot-wrap a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .foot-wrap a:hover {
+    color: deeppink;
+  }
+  
+  .foot-wrap .cmark {
+    display: block;
+    padding: 10px;
+    border-top: 1px solid gray;
+    width: 80%;
+    margin: 0 auto;
+    color: gray;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+@mixin placemiddle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.toast {
+  margin-top: 10px;
+  text-align: center;
+  .notice {
+    background-color: rgb(49, 170, 164);
+    color: #fff;
+    padding: 5px;
+  }
+  .alert {
+    background-color: rgb(235, 65, 65);
+
+  }
+}

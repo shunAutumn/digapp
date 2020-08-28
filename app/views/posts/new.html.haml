@@ -1,0 +1,32 @@
+%div
+  %h2 
+    new
+    =render "form"
+
+
+
+-# %div
+-#   = form_with html: {class: "Form"}, local: true do |f|
+-#     -# .form__imageForm
+-#     -#   = f.label :image, class: 'form__image' do
+-#     -#     = icon('far', 'image', class: 'form__image')
+-#     -#     = f.file_field :image, class: 'form__selectFile'    
+-#     .form__contents
+-#       = f.text_field :content, class: 'form__textForm', placeholder: 'music-name'
+-#       = f.text_field :content, class: 'form__textForm', placeholder: 'artist'
+-#       = f.text_area :content, class: 'form__commentForm', placeholder: 'comment'
+-#     = f.submit 'Send', class: 'form__submit'
+
+
+-# .feedback-card
+-#   .feedback-header
+-#     How Deep Did You Dig?
+-#   %form.feedback-body
+-#     %input.feedback-body__email{:placeholder => "Title"}
+-#     %input.feedback-body__email{:placeholder => "Artist"}
+-#     %textarea.feedback-body__message{:placeholder => "Comment"}
+-#     %button.feedback-body__submit{:action => "root_path"} SEND
+
+
+
+

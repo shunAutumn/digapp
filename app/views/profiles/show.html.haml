@@ -1,0 +1,14 @@
+.profile-contents
+  .profile-box
+    %h2 
+      Profile
+    = form_with model: @profile do |f|
+      .profile-box-detail
+        .form-group
+          = f.text_field :name, placeholder: "Name"
+        .form-group
+          = f.file_field :image
+          %br
+          .form-group
+            .submit-block
+              = f.submit 'submit', :class => "btn btn-submit" 

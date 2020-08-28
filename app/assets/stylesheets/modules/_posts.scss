@@ -1,0 +1,111 @@
+#posts-new, #posts-edit, #posts-create, #posts-update {
+  form {
+    textarea{
+      width: 100%;
+      height: 300px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    .submit-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      .btn-submit {
+        display       : inline-block;
+        border-radius : 7%;          /* 角丸       */
+        font-size     : 16pt;        /* 文字サイズ */
+        text-align    : center;      /* 文字位置   */
+        cursor        : pointer;     /* カーソル   */
+        padding       : 20px 20px;   /* 余白       */
+        background    : #000000;     /* 背景色     */
+        color         : #ffffff;     /* 文字色     */
+        line-height   : 1em;         /* 1行の高さ  */
+        transition    : .3s;         /* なめらか変化 */
+        box-shadow    : 4px 4px 17px #666666;  /* 影の設定 */
+        border        : 2px solid #000000;    /* 枠の指定 */
+      }
+      .button:hover {
+        box-shadow    : none;        /* カーソル時の影消去 */
+        color         : #000000;     /* 背景色     */
+        background    : #ffffff;     /* 文字色     */
+      }
+    }
+  }
+}
+
+// $shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+
+// * { font-family: 'Roboto', sans-serif; }
+
+// body {
+//     margin: 0;
+//     padding: 0;
+//     background-color: #a2a2a2;
+//     display: flex;
+//     flex-direction: column;
+//     height: 100vh;
+// }
+
+// input, button, textarea {
+//     border: 2px solid rgba(0, 0, 0, 0.6);
+//     background-image:none;
+//     background-color: #dadad3;
+//     -webkit-box-shadow: none;
+//     -moz-box-shadow: none;
+//     box-shadow: none;
+//     padding: 5px;
+    
+//     &:focus {
+//         outline: none;
+//     }
+// }
+
+// textarea {
+//     min-height: 50px;
+//     resize:vertical;
+// }
+
+// button {
+//     cursor: pointer;
+//     font-weight: 500;
+// }
+
+// .feedback {
+//     &-card {
+//         border: 1px solid black;
+//         max-width: 980px;
+//         background-color: #fff;
+//         margin: 0 auto;
+//         box-shadow: $shadow;
+//     }
+//     &-header {
+//         text-align: center;
+//         padding: 8px;
+//         font-size: 14px;
+//         font-weight: 700;
+//         border-bottom: 1px solid black;
+//     }
+//     &-body {
+//         padding: 20px;
+//         display: flex;
+//         flex-direction: column;
+
+//         &__email {
+//             margin-top: 5px;
+//         }
+        
+//         &__message {
+//             margin-top: 10px;            
+//         }
+        
+//         button {
+//             margin-top: 10px;
+//             align-self: flex-end;
+//         }
+//     }
+// }

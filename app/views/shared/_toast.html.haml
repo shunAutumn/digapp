@@ -1,0 +1,7 @@
+- if flash[:notice].present?
+  .toast
+    %div.notice= notice
+
+- if flash[:alert].present?
+  .toast
+    %div.alert= alert

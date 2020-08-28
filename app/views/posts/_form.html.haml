@@ -1,0 +1,6 @@
+= form_with model: @post, local: true do |f|
+  = f.text_area :content
+  = f.file_field :images, multiple: true
+  %br
+  .submit-block
+    = f.submit 'POST', :class => "btn btn-submit"

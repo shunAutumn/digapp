@@ -1,4 +1,31 @@
-.wrapper
-  = render "leftside_bar"
-  = render "main_contents"
-  = render "rightside_bar"
+.content-wrapper
+  - @posts.each do |post|
+    .content-block
+      .content
+        .user-about
+          .user-about__userContents
+            .user-about__userIcon
+              - if post.user.image.attached?
+                = image_tag post.user.image
+              - else
+                = image_tag "usericon.png"
+            .user-about__userName
+              = post.user.name
+          .user-about__postDetail
+            .user-about__postDate 5hours ago
+        .body-contents
+          .body-contents__musicdetail
+            .body-contents__musicTitle kill this love
+            .body-contents__artistName blackpink
+            .body-contents__comment 
+              = post.content
+          .body-contents__image
+            - if post.images.attached?
+              .body-contents__albumImage 
+                - post.images.each do |image|
+                  = image_tag image
+            - else
+              .body-contents__albumImage NO IMAGE
+        .action-menu
+        .ike   
+        .comment

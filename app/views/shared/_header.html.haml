@@ -1,14 +1,13 @@
 %div#header
   .logo
-    %a(href="") Dig™️
+    = link_to 'Dig™️', root_path, class: "a btn btn-default header-btn"
 
   .list
     %ul
-      %li
-        %a{:href => "#"} HOME
-      %li
-        %a{:href => "#"} SIGN IN／UP
-      %li
-        %a{:href => "#"} MYPAGE
-      %li
-        %a{:href => "#"} CONTACT
+      - if user_signed_in?
+        %li= link_to 'MYPAGE', new_profile_path, class: "a btn btn-default"
+        %li= link_to '新規投稿', new_post_path, class: "a btn btn-default"
+        %li= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "a btn btn-default"
+      - else
+        %li= link_to '新規登録', new_user_registration_path, class: "a btn btn-default"
+        %li= link_to 'ログイン', new_user_session_path, class: "a btn btn-default"
