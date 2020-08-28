@@ -30,7 +30,6 @@
               }
             }
             .user-about__userName {
-              background-color:  darkcyan;
               width: 180px;
               margin-left: 15px;
               font-weight: bold;
@@ -38,7 +37,6 @@
           }
           .user-about__postDetail {
             .user-about__postDate {
-              background-color: chocolate;
               color: gray;
               font-size: 20px;
             }
@@ -51,17 +49,18 @@
           .body-contents__musicdetail {
             width: 30%;
             .body-contents__musicTitle {
-              background-color: lightgreen;
               height: 25px;
+              border-bottom: 1px solid #a2a2a2;
               // font-size: 32px;
             }
             .body-contents__artistName {
-              background-color: crimson;
+              border-bottom: 1px solid #a2a2a2;
               height: 25px;
               // font-size: 22px;
             }
             .body-contents__comment {
-              background-color: cornflowerblue;
+              margin-top: 2px;
+              border: 1px solid #a2a2a2;
               height: 80px;
               font-size: 11px;
             }

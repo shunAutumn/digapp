@@ -12,11 +12,14 @@
             .user-about__userName
               = post.user.name
           .user-about__postDetail
-            .user-about__postDate 5hours ago
+            .user-about__postDate
+              = post.created_at.strftime("%Y-%m-%d %H:%M")
         .body-contents
           .body-contents__musicdetail
-            .body-contents__musicTitle kill this love
-            .body-contents__artistName blackpink
+            .body-contents__musicTitle
+              = post.musictitle
+            .body-contents__artistName 
+              = post.artist
             .body-contents__comment 
               = post.content
           .body-contents__image

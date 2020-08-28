@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: digapp_production
-  username: digapp
-  password: <%= ENV['DIGAPP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

@@ -1,6 +1,12 @@
 = form_with model: @post, local: true do |f|
-  = f.text_area :content
-  = f.file_field :images, multiple: true
-  %br
-  .submit-block
-    = f.submit 'POST', :class => "btn btn-submit"
+  .form-group
+    = f.text_field :musictitle, placeholder: "music title"
+  .form-group
+    = f.text_field :artist, placeholder: "artist"
+  .form-group
+    = f.text_area :content, placeholder: "comment"
+  .form-group
+    = f.file_field :images, multiple: true
+    %br
+    .submit-block
+      = f.submit 'POST', :class => "btn btn-submit"

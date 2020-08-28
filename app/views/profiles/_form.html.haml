@@ -1,7 +1,7 @@
 .profile-box-detail
   = form_with model: @profile, local: true do |f|
     = f.text_field :name, placeholder: "Name"
-    = f.file_field :images
+    = f.file_field :image
     %br
     .submit-block
       = f.submit 'POST', :class => "btn btn-submit" 

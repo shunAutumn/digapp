@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_08_28_131153) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
+    t.text "artist"
+    t.text "musictitle"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
